@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo-Music-Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./Image/favicon.ico" type="image/x-icon">
+  </head>
+  <body >
+    <header>
+      <img src="./Svg/playlist.svg" alt="playlist" id="playlist-img" />
+      <h1 >FEEL THE MUSIC</h1>
+      <img src="./Svg/music.svg" alt="music" id="music-img" />
+    </header>
+    <main class="overlay">
+      <div class="left">
+        <div class="song-image">
+          <img src="musicanim.webp" alt="anim" id="musicanim" />
+        </div>
+        <div class="volume-div">
+          <div class="volume-img muteunmute" id="mute-unmute">
+            <img src="./Svg/volume.svg" alt="volume" id="vol-svg"  />
+          </div>
+          <input type="range" id="volume-range" onchange="volume()" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="details">
+          <h3 id="song-name">Ve Kamleya</h3>
+          <h5 id="song-singer">Arijit Singh</h5>
+        </div>
+        <div class="slider_container">
+            <div class="current-time">00:00</div>
+            <input type="range" id="song-duration" onchange="duration()" />
+            <div class="total-duration">00:00</div>
+        </div>
+        <div class="controls">
+          <div class="prev-img"  onclick="previousSong()">
+            <img
+              src="./Svg/prev.svg"
+              alt="prev"
+              id="prev-img"
+             
+            />
+          </div>
+          <div class="play-pause" onclick="playPause()">
+            <img
+              src="./Svg/play.svg"
+              alt="play"
+              id="play-pause"
+              
+            />
+          </div>
+          <div class="next-img" onclick="nextSong()">
+            <img src="./Svg/next.svg" alt="next" id="next-img"  />
+          </div>
+        </div>
+      </div>
+      <div class="playlist">
+        <div class="playlist-song">
+          <img src="./Image/p1.jpg" alt="img" />
+          <div class="song-details">
+            <h2>Dil Ko Maine Di Kasam </h2>
+            <h5>Arijit Singh</h5>
+          </div>
+        </div>
+        <div class="playlist-song">
+          <img src="./Image/p2.jpg" alt="img" />
+          <div class="song-details">
+            <h2>Bekhayali</h2>
+            <h5>Arijit Singh</h5>
+          </div>
+        </div>
+        <div class="playlist-song">
+          <img src="./Image/p3.jpg" alt="img" />
+          <div class="song-details">
+            <h2>Ve Kamleya</h2>
+            <h5>Arijit Singh</h5>
+          </div>
+        </div>
+        <div class="playlist-song">
+          <img src="./Image/p4.jpg" alt="img" />
+          <div class="song-details">
+            <h2>Apna Bana Le</h2>
+            <h5>Arijit Singh</h5>
+          </div>
+        </div>
+        <div class="playlist-song">
+          <img src="./Image/p5.jpg" alt="img" />
+          <div class="song-details">
+            <h2>Pehle Bhi Me</h2>
+            <h5>Vishal Mishra</h5>
+          </div>
+        </div>
+        <div class="playlist-song">
+          <img src="./Image/p6.jpg" alt="img" />
+          <div class="song-details">
+            <h2>Satranga</h2>
+            <h5>Arijit Singh</h5>
+          </div>
+        </div>
+        <div class="playlist-song">
+          <img src="./Image/p7.jpg" alt="img" />
+          <div class="song-details">
+            <h2>Borbad Hoyechi Ami Tor Apekhhai</h2>
+            <h5>Arindom</h5>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
